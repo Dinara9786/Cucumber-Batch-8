@@ -1,0 +1,90 @@
+
+Cucumber Class 05, January 23, 2020
+
+MAVEN:
+it is build automation management tool. It helps us manage depencencies and plugins so that we can run our test properly.
+Maven is a build automation tool which helps us to manage our dependencies and plugins and lets us to run our
+tests properly. The heart of Maven is POM.xml file.
+
+Maven has 3 basic (build-in) lifecicles:
+1. default lifecicle == it will help organize our project deployment
+2. clean lifecicle == this will handles the projects cleaning
+3. site lifecicle == handles the creation of our project site documentation. Any report is considered as a documentation.
+
+JAR FILEs are common methods, adn classes that we can re-use.
+
+We must have our maven project in POM.xml
+initially, we used jar files.
+
+2 main commands we used before = mvn clean = will clean our target folder to avoid duplicates.
+IN target folder we have reports, failed cases, any test output.
+
+and mvn test = it runs our tests.
+
+there are lots of maven commands. developers use the commands as well.
+
+Functions to build:
+selecDDValue overload
+switchToFrame overload
+Actions functions = drag and drop, hover over
+
+Visual code studio smth???????????????????????????????
+
+MAVEN.APACHE WEBSITE
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
+
+
+What is COMpile? = reads our code, build classes, whenever we are writing our code inside our project, the output
+in console automatically, what kind of errors are thrown if the code is not correct. Syntax errors will throw us
+a compile time error.
+
+A Build Lifecycle is Made Up of Phases
+Each of these build lifecycles is defined by a different list of build phases, wherein a build phase represents
+a stage in the lifecycle.
+
+For example, the default lifecycle comprises of the following phases (for a complete list of the lifecycle
+phases, refer to the Lifecycle Reference):
+
+validate - validate the project is correct and all necessary information is available
+compile - compile the source code of the project
+test - test the compiled source code using a suitable unit testing framework. These tests should not
+require the code be packaged or deployed
+package - take the compiled code and package it in its distributable format, such as a JAR.
+verify - run any checks on results of integration tests to ensure quality criteria are met
+install - install the package into the local repository, for use as a dependency in other projects locally
+deploy - done in the build environment, copies the final package to the remote repository for sharing
+with other developers and projects.
+These lifecycle phases (plus the other lifecycle phases not shown here) are executed sequentially to
+complete the default lifecycle. Given the lifecycle phases above, this means that when the default
+lifecycle is used, Maven will first validate the project, then will try to compile the sources,
+run those against the tests, package the binaries (e.g. jar), run integration tests against that package,
+verify the integration tests, install the verified package to the local repository, then deploy
+ the installed package to a remote repository.
+
+
+========================================================
+Test Automation EngineerIf you are a 5+yr Test Automation Engineer with experience writing actual Java code, please read on!
+What You Need for this Position
+• 5+yrs Test Engineer
+• Java (seeking someone who not only understands Java, but can actually write Java code)
+- SQL (seeking someone who uses SQL for automation - join different tables, etc - vs someone who understands a simple query)
+• Automation (Selenium)
+• Manual testing, including of both web and desktop applications
+It is a plus if you have experience in:
+• API Testing
+• TestNG
+• Maven
+• RESTAssured
+• Postman
+• JMeter
+• Version control systems
+What You Will Be Doing
+• 70% automation + 30% manual testing
+• Write automation test scripts (Selenium and TestNG)
+• Load testing with JMeter (or similar tools)
+• Regression / smoke test suites
+So, if you are a 5+yr Test Automation Engineer with experience writing actual Java code, please apply today!
+
+
+
+====================

@@ -1,0 +1,88 @@
+
+Class 02, January 16, 2020
+
+PageInitiliazer = initializes pages
+
+BDD - benefit = main purpose BDD is it is process that creates collaboration between non technical and technical
+members fo the team.
+Benefit of Cucumber is = plain language, open source and free to use, it is compatible and can be integrated with
+different programing languages and automation tools as well.
+
+TestRunners
+SmokeRunner = only smoke tests
+RegressionRunner =
+FailerRunner =
+
+Runner class:
+it help us execute our cucumber tests by using JUnit.
+We use Cucumber  to run our test (JUnit as well)
+
+when dryRun is TRUE and it will not execute because in login.feature we do not have unimplements methods.
+dryRUN is TRUE = it will implement only unimplemented methods.
+when dryRun is FALSE = it will not run
+
+What is the point of multiple tag ??? = >
+
+if to run with multiple tags:
+tags = {"@smoke, "@whatever"}
+
+with PLUGIN = we can generate reports, etc
+
+PRETTY will print steps inside the console
+
+dry run looks ahead  --finds unimplemented--->doesn’t run at all
+srtict - runs-->finds unimplemented methods -->fails
+
+"html:target/cucumber-default-reports"} )// it will generate html default page for us
+html:   = report
+target/cucumber-default-reports" where and the name of the report
+
+json file is used to get report, but in general json is used for API testing. JSON file is data storage.
+JSON is short for JavaScript Object Notation, and is a way to store information in an organized, easy-to-access manner.
+
+HOOKS = benefit is when we start our scenario , but are the steps that we constinutely perform (like login and quite)
+will give us opportunity to run our test without reusing our steps? // this is not clear, check google
+it is executed based on annotations, it is annotation-based function from cucumber (from io.cucumber.java)
+
+Hooks = execute at the beginning and quitting : launching, navigating and quitting
+
+HOOKs are annotation baed library which give us an opportunity to start a test adn end the test
+
+@After annotation will be executed no matter of the result of the test. @After will be executed anyway.
+
+Screenshot = we should put ..
+
+Cucumber itself doesn’t provide functionality for taking screenshots,
+but it does make it possible to embed them in the report.
+
+HW:
+Come up with test scenarios which adds an employee
+1. Without login details
+2. with login details
+
+we need to create new feature file
+scenario
+implement steps
+and past them in new stepdefinition class
+and implement actions
+
+HW
+Create 2 more runners
+Smoke Test
+Regression Test
+
+the purpose of FAILER.Runner is collect failed cases = we should specify only failed scenarios,
+we do not need to give whole path to features and run only failed tests.
+
+JIRA:
+
+work assignment
+Tracking our progress of our project that we are working on. Trackign our work.
+
+=============
+of the topic
+how to close/dismiss pop-up ads
+if it inpectable, then we can click on it . we do not have to switch, it is just an element.
+In this case , there should be a condition. and it is better to do it manually. In real life project
+we will not see unexpected pop up.
+

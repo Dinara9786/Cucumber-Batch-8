@@ -1,0 +1,58 @@
+Cucumber Class 03, January 19, 2020
+
+feature = we give a path to our feature file
+glue = path to our stepdefinitions
+dryRun = it shows missing steps, it can be true or false.
+monograph =
+strict = it shows unimplmenented steps, it runs the test, when it comes to unimplement steps it will fail
+tags = we run specific scenario. We specify inside our feature file
+plugin = gives us report we want to get.
+Hooks = used ot define methods that we will always execute. It executes before scenario and after scenario, no matter what.
+Hooks is a class inside our... it is completely independent.
+
+Background (in feature)
+we specify this in specified feature only if the steps are common from the beginning
+common steps in all teh scenarios in one specific feature
+ie:
+When    login with valid credentials
+Then     navigate to add employee page
+
+What is the difference between Hooks and Background
+Hooks = is implemented for all the features across the project and are based on annotations @Before and @After
+Background = only for the specified feature file and only initial common steps for all scenarios in the feature
+
+We set dryRun as TRUE = we get unimplemented snippets, only for this purpose
+
+What is difference Scenario Outline and Scenario
+
+Scenario will run the steps only once and finish the execution.
+Scenario outline will run all the steps the number of times as you have many set fo data you have in your Examples.
+In outline scenario we perform data driven test
+
+
+Data Driven Test in Cucumber can be performed in 2 ways
+1. Scenario Outline with @xamples
+2. Datatable
+
+Whenever we use Scenario Outline we must use Examples.
+
+Parameter = we provide in ""
+
+Scenario vs Scenario Outline:
+
+HW:
+Search for employee
+5 sets fo data for searching by id
+5 sets fo data searching by name
+use background, and scenario outline
+
+Scenario will run the steps only once and finish the eecution
+
+Scenario outline will run all the steps same number of time depending on how many sets of data
+you have stored inside Examples. Examples is a MUST for scenario outline.
+
+DataTable does not require to use Scenario OUtline, we can use regular Scenario, adn does not require examples,
+it will run.
+
+expected = what I want to see
+actual = actual on the UI, on the page

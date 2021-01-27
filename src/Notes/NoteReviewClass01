@@ -1,0 +1,59 @@
+
+Cucumber Review Class 01, January 21, 2020
+
+Cucumber = is framework/Testing tool that supports behavior driven development.
+BDD it focuses on end user, oru systme specification they writiten from user perspective.
+Acceptance criteria, AC is being written by business analyst.
+
+other tools that support BDD = Serenity, SpecFlow.
+Cucumber uses plain language = gherkin language.
+Given - pre condition
+When - action
+Then - result
+And - continue any step
+but - this is used very rare
+
+Feature: is functionality we are testing, high level feature/functionality of the system,
+description of the software feature that we are testing.
+
+Scenario:it is a way how we can test this particular feature or particular fucntionality,
+there coudl be ultiple scenarios, multiple ways how we can test this particular feature or
+functionality fo the system.
+Scenario Outline: - executes same scenario muliple times base don the data provided in Examples table
+
+Cucumber datatable - execute same STEP multiple times based on data inside cucumber datatable.
+
+
+Cucumber datatable
+
+If data becomes large -- > we need to use Excel
+
+
+
+==============
+
+what we have in feature file by default
+#Author: your.email@your.domain.com
+#Keywords Summary :
+#Feature: List of scenarios.
+#Scenario: Business rule through list of steps with arguments.
+#Given: Some precondition step
+#When: Some key actions
+#Then: To observe outcomes or validation
+#And,But: To enumerate more Given,When,Then steps
+#Scenario Outline: List of steps for data-driven as an Examples and <placeholder>
+#Examples: Container for s table
+#Background: List of steps run before each of the scenarios
+#""" (Doc Strings)
+#| (Data Tables)
+#@ (Tags/Labels):To group Scenarios
+#<> (placeholder)
+#""
+## (Comments)
+#Sample Feature Definition Template
+
+Background = will work only for particular feature, but for all scenarios with all common steps
+Hooks = more global concept that is applicable for all the scenarios.
+
+
+
