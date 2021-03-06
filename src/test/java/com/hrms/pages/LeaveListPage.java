@@ -7,13 +7,13 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LeaveListPage extends CommonMethods {
 
-    @FindBy (id = "leaveLilst_cmbSubunit")
-    WebElement leaveList subUnitDD;
+    @FindBy (id = "leaveList_cmbSubunit")
+    public WebElement subUnitDD;
 
     public LeaveListPage(){
+        PageFactory.initElements(driver,this);
 
 
-            PageFactory.initElements(driver, this);
 
-
+    }
 }
