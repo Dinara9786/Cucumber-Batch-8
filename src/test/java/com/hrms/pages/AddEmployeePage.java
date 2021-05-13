@@ -49,12 +49,13 @@ public class AddEmployeePage extends CommonMethods {
 
     public void enterFirstMiddleAndLastName(String firstName, String middleName, String lastName){
         sendText(firstNameTextBox, firstName); // value is firstName
-        sendText(middleNameTextbox, middleName); // value is firstName
+        sendText(middleNameTextbox, middleName); // value is middleName
         sendText(lastNameTextbox, lastName);  // value is lastName
 
     }
 
     public void enterEmployeeId (String employeeId){
+
         sendText(empIDTextbox, employeeId);
     }
 
@@ -64,6 +65,7 @@ public class AddEmployeePage extends CommonMethods {
     }
 
     public AddEmployeePage() {
+
         PageFactory.initElements(driver, this);
     }
 }

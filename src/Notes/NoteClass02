@@ -46,7 +46,7 @@ it is executed based on annotations, it is annotation-based function from cucumb
 
 Hooks = execute at the beginning and quitting : launching, navigating and quitting
 
-HOOKs are annotation baed library which give us an opportunity to start a test adn end the test
+HOOKs are annotation based library which give us an opportunity to start a test adn end the test
 
 @After annotation will be executed no matter of the result of the test. @After will be executed anyway.
 

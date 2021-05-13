@@ -32,6 +32,7 @@ public class BaseClass {
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 driver = new FirefoxDriver();
+
                 break;
             default:
                 throw new RuntimeException("Ivalid browser");

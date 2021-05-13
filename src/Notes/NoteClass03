@@ -39,13 +39,6 @@ Whenever we use Scenario Outline we must use Examples.
 Parameter = we provide in ""
 
 Scenario vs Scenario Outline:
-
-HW:
-Search for employee
-5 sets fo data for searching by id
-5 sets fo data searching by name
-use background, and scenario outline
-
 Scenario will run the steps only once and finish the eecution
 
 Scenario outline will run all the steps same number of time depending on how many sets of data
@@ -56,3 +49,11 @@ it will run.
 
 expected = what I want to see
 actual = actual on the UI, on the page
+
+
+HW:
+Search for employee
+5 sets fo data for searching by id
+5 sets fo data searching by name
+use background, and scenario outline
+

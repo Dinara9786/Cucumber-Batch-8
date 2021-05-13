@@ -17,7 +17,7 @@ Feature: is functionality we are testing, high level feature/functionality of th
 description of the software feature that we are testing.
 
 Scenario:it is a way how we can test this particular feature or particular fucntionality,
-there coudl be ultiple scenarios, multiple ways how we can test this particular feature or
+there coudl be multiple scenarios, multiple ways how we can test this particular feature or
 functionality fo the system.
 Scenario Outline: - executes same scenario muliple times base don the data provided in Examples table
 

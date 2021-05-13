@@ -48,7 +48,6 @@ public class AddEmployeeStepDefinition extends CommonMethods {
     @Then("enter first name {string}, middle name {string} and last name {string}")
     public void enter_first_name_middle_name_and_last_name(String firstName, String middleName, String lastName) {
         addEmployeePage.enterFirstMiddleAndLastName(firstName, middleName, lastName);
-
     }
 
     @Then("verify that {string} is added successfully")
