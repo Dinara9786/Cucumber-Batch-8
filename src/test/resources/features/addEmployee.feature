@@ -56,7 +56,7 @@ Feature: Add Employee Functionality Duplicate
 
     @db @regression
     Scenario: Adding Employee and database validation
-      When enter first name "John", middle name "John" and last name "Doe"
+      When enter first name "Madonna", middle name "John" and last name "Jack"
       And capture employeeId
       And click on save button
       Then collect employee data from hrms database

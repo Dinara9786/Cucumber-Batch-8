@@ -1,18 +1,13 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/PIMOptionalConfiguration.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/addEmployee.feature");
 formatter.feature({
-  "name": "Configure PIM - Optional Fields",
+  "name": "Add Employee Functionality Duplicate",
   "description": "",
   "keyword": "Feature"
 });
-formatter.scenario({
-  "name": "Unchecking unnecessary checkboxes",
+formatter.background({
+  "name": "",
   "description": "",
-  "keyword": "Scenario",
-  "tags": [
-    {
-      "name": "@pim"
-    }
-  ]
+  "keyword": "Background"
 });
 formatter.before({
   "status": "passed"
@@ -58,45 +53,44 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on configuration dropdown",
+  "name": "click on add employee button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.click_on_add_employee_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Adding Employee and database validation",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@db"
+    },
+    {
+      "name": "@regression"
+    }
+  ]
+});
+formatter.step({
+  "name": "enter first name \"Madonna\", middle name \"John\" and last name \"Jack\"",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.PIMConfigurationStepDefinition.click_on_configuration_dropdown()"
+  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.enter_first_name_middle_name_and_last_name(java.lang.String,java.lang.String,java.lang.String)"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on optional fields",
+  "name": "capture employeeId",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.PIMConfigurationStepDefinition.click_on_optional_fields()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on edit button",
-  "keyword": "Then "
-});
-formatter.match({
-  "location": "com.hrms.stepdefinitions.PIMConfigurationStepDefinition.click_on_edit_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "uncheck unnecessary checkboxes",
-  "rows": [
-    {},
-    {}
-  ],
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.hrms.stepdefinitions.PIMConfigurationStepDefinition.uncheck_unnecessary_checkboxes(io.cucumber.datatable.DataTable)"
+  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.capture_employeeId()"
 });
 formatter.result({
   "status": "passed"
@@ -111,7 +105,28 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Unchecking unnecessary checkboxes");
+formatter.step({
+  "name": "collect employee data from hrms database",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.DBStepDefinitions.collect_employee_data_from_hrms_database()"
+});
+formatter.result({
+  "error_message": "java.lang.NullPointerException\r\n\tat com.hrms.utils.DbUtils.getResultSet(DbUtils.java:32)\r\n\tat com.hrms.utils.DbUtils.getDbDataIntoList(DbUtils.java:46)\r\n\tat com.hrms.stepdefinitions.DBStepDefinitions.collect_employee_data_from_hrms_database(DBStepDefinitions.java:17)\r\n\tat ✽.collect employee data from hrms database(file:///C:/Users/drysa/IdeaProjects/CucumberFrameworkBatch8/src/test/resources/features/addEmployee.feature:62)\r\n",
+  "status": "failed"
+});
+formatter.step({
+  "name": "verify data from db and ui is matched",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.verify_data_from_db_and_ui_is_matched()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png", "Adding Employee and database validation");
 formatter.after({
   "status": "passed"
 });

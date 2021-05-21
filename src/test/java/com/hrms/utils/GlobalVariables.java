@@ -6,6 +6,7 @@ import java.util.Map;
 public class GlobalVariables {
 
     public static String emp_Id;
+    public static String employeeData;
 
-    public List<Map< String, String>> dbList;
+    public static List<Map< String, String>> dbList;
 }

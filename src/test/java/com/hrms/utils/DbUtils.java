@@ -9,21 +9,20 @@ import java.util.Map;
 public class DbUtils {
 
     private static Connection conn;
-
     private static Statement st;
     private static ResultSet rset;
 
     public static Connection getConnection() {
 
         try {
-            conn = DriverManager.getConnection(ConfigsReader.getPropertyValue("dbUrl"));
-
-            ConfigsReader.getPropertyValue("dbUsername");
-            ConfigsReader.getPropertyValue("dbPassword");
-
+            conn = DriverManager.getConnection(
+                    ConfigsReader.getPropertyValue("dbUrl"),
+                    ConfigsReader.getPropertyValue("dbUsername"),
+                    ConfigsReader.getPropertyValue("dbPassword"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         return conn;
     }
 
@@ -35,9 +34,7 @@ public class DbUtils {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return rset;
-
     }
 
     public static List<Map<String, String>> getDbDataIntoList(String query) {
@@ -48,20 +45,43 @@ public class DbUtils {
         try {
             ResultSetMetaData rsetMData = getResultSet(query).getMetaData();
 
-            while (rset.next()) { // loops through all rows
+            while (rset.next()) {// loops though all rows
+
                 map = new LinkedHashMap<>();
 
-                for (int c = 1; c <=rsetMData.getColumnCount(); c++) { // loops through each column of the row
+                for (int c = 1; c <= rsetMData.getColumnCount(); c++) { // loops through each column of the row
                     map.put(rsetMData.getColumnName(c), rset.getString(c));
                 }
-
                 dbList.add(map);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            closeConnection();
         }
+
         return dbList;
     }
+
+    public static void closeConnection() {
+
+        try {
+
+            if (rset != null) {
+                rset.close();
+            }
+
+            if (st != null) {
+                st.close();
+            }
+
+            if (conn != null) {
+                conn.close();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
-
-

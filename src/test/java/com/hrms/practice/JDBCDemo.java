@@ -10,7 +10,7 @@ public class JDBCDemo {
 
     String dbUsername = "syntax_hrm";
     String dbPassword = "syntaxhrm123";
-    //jdbc:mysql://hostname:port/db name
+    //jdbc:type of jdbc = mysql://hostname:port/db name
     String dbUrl = "jdbc:mysql://3.237.189.167:3306/syntaxhrm_mysql";
 
     @Test
