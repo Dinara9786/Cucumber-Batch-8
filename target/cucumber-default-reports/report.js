@@ -1,13 +1,53 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/addEmployee.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("file:src/test/resources/features/login.feature");
 formatter.feature({
-  "name": "Add Employee Functionality Duplicate",
+  "name": "Login Functionality",
   "description": "",
-  "keyword": "Feature"
+  "keyword": "Feature",
+  "tags": [
+    {
+      "name": "@featureTag"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "feature"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tag"
+    }
+  ]
 });
-formatter.background({
-  "name": "",
+formatter.scenario({
+  "name": "Login with valid credentials",
   "description": "",
-  "keyword": "Background"
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@featureTag"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "feature"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tag"
+    }
+  ]
 });
 formatter.before({
   "status": "passed"
@@ -42,91 +82,223 @@ formatter.match({
 formatter.result({
   "status": "passed"
 });
-formatter.step({
-  "name": "click on PIM",
-  "keyword": "When "
-});
-formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.click_on_PIM()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "click on add employee button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.click_on_add_employee_button()"
-});
-formatter.result({
+formatter.embedding("image/png", "embedded0.png", "Login with valid credentials");
+formatter.after({
   "status": "passed"
 });
 formatter.scenario({
-  "name": "Adding Employee and database validation",
+  "name": "Login with invalid credentials",
   "description": "",
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@db"
+      "name": "@featureTag"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "feature"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tag"
+    },
+    {
+      "name": "@smoke"
+    },
+    {
+      "name": "@syntax"
     },
     {
       "name": "@regression"
+    },
+    {
+      "name": "@whatever"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "adding"
+    },
+    {
+      "name": "multiple"
+    },
+    {
+      "name": "scenario"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tags"
     }
   ]
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
-  "name": "enter first name \"Madonna\", middle name \"John\" and last name \"Jack\"",
+  "name": "enter invalid credentials",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.enter_first_name_middle_name_and_last_name(java.lang.String,java.lang.String,java.lang.String)"
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.enter_invalid_credentials()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "capture employeeId",
+  "name": "click on login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.capture_employeeId()"
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.click_on_login_button()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "click on save button",
-  "keyword": "And "
-});
-formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.click_on_save_button()"
-});
-formatter.result({
-  "status": "passed"
-});
-formatter.step({
-  "name": "collect employee data from hrms database",
+  "name": "verify error message is displayed",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.DBStepDefinitions.collect_employee_data_from_hrms_database()"
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.verify_error_message_is_displayed()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.hrms.utils.DbUtils.getResultSet(DbUtils.java:32)\r\n\tat com.hrms.utils.DbUtils.getDbDataIntoList(DbUtils.java:46)\r\n\tat com.hrms.stepdefinitions.DBStepDefinitions.collect_employee_data_from_hrms_database(DBStepDefinitions.java:17)\r\n\tat ✽.collect employee data from hrms database(file:///C:/Users/drysa/IdeaProjects/CucumberFrameworkBatch8/src/test/resources/features/addEmployee.feature:62)\r\n",
-  "status": "failed"
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded1.png", "Login with invalid credentials");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Leave Username empty",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@featureTag"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "feature"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tag"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.step({
-  "name": "verify data from db and ui is matched",
+  "name": "leave username empty and put valid password",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.leave_username_empty_and_put_valid_password()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on login button",
   "keyword": "And "
 });
 formatter.match({
-  "location": "com.hrms.stepdefinitions.AddEmployeeStepDefinition.verify_data_from_db_and_ui_is_matched()"
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.click_on_login_button()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Adding Employee and database validation");
+formatter.step({
+  "name": "verify error message \"Username cannot be empty\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.verify_error_message(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded2.png", "Leave Username empty");
+formatter.after({
+  "status": "passed"
+});
+formatter.scenario({
+  "name": "Leave password empty",
+  "description": "",
+  "keyword": "Scenario",
+  "tags": [
+    {
+      "name": "@featureTag"
+    },
+    {
+      "name": "@login"
+    },
+    {
+      "name": "#"
+    },
+    {
+      "name": "feature"
+    },
+    {
+      "name": "level"
+    },
+    {
+      "name": "tag"
+    }
+  ]
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "leave password empty and put valid username",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.leave_password_empty_and_put_valid_username()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "click on login button",
+  "keyword": "And "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.click_on_login_button()"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "validate error message \"Password cannot be empty\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.hrms.stepdefinitions.LoginStepDefinition.validate_error_message(java.lang.String)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.embedding("image/png", "embedded3.png", "Leave password empty");
 formatter.after({
   "status": "passed"
 });
